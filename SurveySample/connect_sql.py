@@ -17,7 +17,9 @@ df = pd.read_sql(query, sql_conn)
 print(df.head(3))
 
 # IF USE OF STORED PROCEDURE IS RESTRICTED
-# USE VIEW
-query = "SELECT * FROM [Survey_Sample_A18].[dbo].[vw_AllSurveyData] ORDER BY SurveyId, UserId"
+# USE TRIGGERS TO ACTIVATE A FUNCTION AND CREATE A VIEW
+query = "SELECT * FROM [dbo].[vw_AllSurveyData] ORDER BY SurveyId, UserId"
 df = pd.read_sql(query, sql_conn)
 print(df.head(3))
+
+# WRITE THE STORE PROCEDURE IN PYTHON INSTEAD OF IN SQL
