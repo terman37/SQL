@@ -71,6 +71,8 @@ print(finalResult.tail())
 print(finalResult.info())
 print("\n\n")
 
+
+
 ### second way, more direct python way. maybe less flexible... exact same result (slighty slower execution)
 t1 = time.time()
 # Create pivot of answers vs userid and surveyid
